@@ -18,6 +18,7 @@ class TextureManager:
         self.object_textures = {
             ObjectType.STONE_0: self._load_texture("assets/objects/stone_0.png", OBJECT_SIZES[ObjectType.STONE_0], False, False),
             ObjectType.TREE_0: self._load_texture("assets/objects/tree_0.png", OBJECT_SIZES[ObjectType.TREE_0], False, False),
+            ObjectType.CARTOON_BERG: self._load_texture("assets/objects/cartoon_berg.png", OBJECT_SIZES[ObjectType.CARTOON_BERG], False, False),
         }
         
     def get_tile_texture(self, tile_type):
@@ -27,6 +28,7 @@ class TextureManager:
         return self.object_textures.get(object_type)
     
     def _load_texture(self, path, size, mirror_horizontal, mirror_vertical):
+        #print(path)
         texture = pygame.image.load(path).convert_alpha()
         texture = pygame.transform.scale(texture, size)
         texture = pygame.transform.flip(texture, mirror_horizontal, mirror_vertical)
