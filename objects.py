@@ -4,7 +4,7 @@ from enum import Enum
 class ObjectType(Enum):
     STONE_0 = 0
     TREE_0 = 1
-    CARTOON_BERG = 6
+    
     
     
 class Object:
@@ -17,5 +17,4 @@ class Object:
 OBJECT_SIZES = {
     ObjectType.STONE_0: (32, 31),
     ObjectType.TREE_0: (50, 68),
-    ObjectType.CARTOON_BERG: (50, 68),
 }
