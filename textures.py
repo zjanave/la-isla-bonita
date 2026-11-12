@@ -7,12 +7,12 @@ class TextureManager:
     def __init__(self, tile_size):
         self.tile_textures = {
             TileType.WATER: self._load_texture("assets/tiles/water.png", (tile_size, tile_size), False, False),
-            TileType.SAND: self._load_texture("assets/tiles/sand.png", (tile_size, tile_size), False, False),
+            TileType.SAND: self._load_texture("assets/textures/sand_texture_1.png", (tile_size, tile_size), False, False),
             TileType.WATER_SAND_1: self._load_texture("assets/tiles/water_sand.png", (tile_size, tile_size), False, False),
             TileType.WATER_SAND_2: self._load_texture("assets/tiles/water_sand.png", (tile_size, tile_size), False, True),
             TileType.WATER_SAND_3: self._load_texture("assets/tiles/water_sand.png", (tile_size, tile_size), True, False),
             TileType.WATER_SAND_4: self._load_texture("assets/tiles/water_sand.png", (tile_size, tile_size), True, True),
-            TileType.GRASS: self._load_texture("assets/tiles/grass.png", (tile_size, tile_size), False, False),
+            TileType.GRASS: self._load_texture("assets/textures/grass_texture_1.png", (tile_size, tile_size), False, False),
         }
         
         self.object_textures = {

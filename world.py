@@ -38,9 +38,11 @@ class World:
         self.objects = [
             Object(ObjectType.STONE_0, 320, 280),
             Object(ObjectType.STONE_0, 270, 270),
-            Object(ObjectType.TREE_0, 250, 100),
-            Object(ObjectType.TREE_0, 290, 170),
+            Object(ObjectType.TREE_0, 250, 350),
+            Object(ObjectType.TREE_0, 290, 240),
             Object(ObjectType.TREE_0, 180, 140),
+            Object(ObjectType.CARTOON_BERG, 310, 207),
+            Object(ObjectType.CARTOON_BERG, 200, 207),
         ]
         
         self.texture_manager = TextureManager(self.tile_size)

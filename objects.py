@@ -18,5 +18,5 @@ class Object:
 OBJECT_SIZES = {
     ObjectType.STONE_0: (32, 31),
     ObjectType.TREE_0: (50, 68),
-    ObjectType.CARTOON_BERG: (50, 68),
+    ObjectType.CARTOON_BERG: (300, 367),
 }
