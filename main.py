@@ -16,7 +16,8 @@ game_world = world.World(TILE_SIZE)
 
 running = True
 while running:
-    clock.tick(FPS)
+    dt_ms = clock.tick(FPS)
+    print(dt)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
