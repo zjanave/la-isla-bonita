@@ -2,6 +2,7 @@ import pygame
 from tiles import TileType
 from objects import ObjectType, Object
 from textures import TextureManager
+from player import Player
 
 
 class World:
@@ -47,7 +48,12 @@ class World:
         
         self.texture_manager = TextureManager(self.tile_size)
         
+        self.player = Player(50, 100, 100, 100)
         
+    
+    def update(self, dt, player_going_up, player_going_down, player_going_right, player_going_left):
+        self.player.update(dt, player_going_up, player_going_down, player_going_right, player_going_left)
+    
     def draw(self, screen):
         row_cnt = len(self.tile_map)
         col_cnt = len(self.tile_map[0])
@@ -61,3 +67,4 @@ class World:
         for obj in self.objects:
             texture = self.texture_manager.get_object_texture(obj.obj_type)
             screen.blit(texture, (obj.x, obj.y))
+        pygame.draw.rect(screen, (0, 0, 0), (self.player.x, self.player.y, self.player.width, self.player.height))
