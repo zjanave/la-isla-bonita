@@ -23,10 +23,15 @@ class Direction(Enum):
 class Animal:
     def __init__(x, y):
         self.location = (x, y)
-        self.target = (0, 0)
+        self.target = None
         self.direction = Direction.LEFT
         
-    def update(delta_time):
-        pass
+        
+    def update(delta_time, tile_map, tile_size):
+        if self.target is None:
+            rand_x = random.randrange(len(self.tile_map[0]))
+            rand_y = random.randrange(len(self.tile_map))
+            self.target = rand_x, rand_y
+        
         
 
